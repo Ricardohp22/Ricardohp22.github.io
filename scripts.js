@@ -1,2 +1,2 @@
 nombre = prompt("hola");
-alert(nombre);
+alert(nombre)
