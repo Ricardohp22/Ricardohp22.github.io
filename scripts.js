@@ -1,2 +1,1 @@
-nombre = prompt("que onda");
-alert(nombre);
+alert("nombre");
