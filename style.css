@@ -37,7 +37,15 @@ a{
     margin: 10px 10px 10px 40px;
 }
 
-
+.menuIcon i{
+    font-size: 2rem;
+    margin: 15px;
+    color: white;
+    cursor: pointer;
+}
+#nav{
+    display: none;
+}
 
 
 /*Inicio*/
@@ -79,7 +87,7 @@ h3{
 /*Nosotros*/
 #nosotros{
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
     background: #fff;
@@ -100,7 +108,7 @@ h3{
 }
 #nos-container p{
     color: rgb(82,82,82);
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     box-sizing: border-box;
     
@@ -124,7 +132,8 @@ h3{
 /*Soluciones*/
 #soluciones{
     display: flex;
-    height: 25vw;
+    flex-wrap: wrap;
+    height: 100vw;
     box-sizing: border-box;
 }
 #soluciones h3{
@@ -133,13 +142,17 @@ h3{
 #soluciones div{
     display: flex;
     background: rgb(65, 190, 212);
-    width: 25vw;
-    height: 100%;
+    width: 50vw;
+    height: 50vw;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    box-sizing: border-box;
 }
 /*proyectos*/
+.descripcion{
+    display: none;
+}
 #proyectos{
     padding-top: 10vh;
 }
@@ -151,10 +164,13 @@ h3{
 }
 #contenidoProy div{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 #contenidoProy p{
     text-align: center;
+    color: #fff;
 }
 .ejemplos{
     width: 300px;
@@ -162,47 +178,70 @@ h3{
     margin: 30px;
     border-radius: 10px;
 }
+
 #ej1{
-    background-image: url("http://lorempixel.com/400/400/");
+    background-image: url("images/proy2.png");
 }
 #ej2{
-    background-image: url("http://lorempixel.com/400/400/");
+    background-image: url("images/proy2.png");
 }
 #ej3{
-    background-image: url("http://lorempixel.com/400/400/");
+    background-image: url("images/proy2.png");
 }
 #ej4{
-    background-image: url("http://lorempixel.com/400/400/");
+    background-image: url("images/proy2.png");
 }
 #ej5{
-    background-image: url("http://lorempixel.com/400/400/");
+    background-image: url("images/proy2.png");
 }
 #ej6{
-    background-image: url("http://lorempixel.com/400/400/");
+    background-image: url("images/proy2.png");
 }
 #ej7{
-    background-image: url("http://lorempixel.com/400/400/");
+    background-image: url("images/proy2.png");
 }
 #ej8{
-    background-image: url("http://lorempixel.com/400/400/");
+    background-image: url("images/proy2.png");
 }
 #tituloProy{
     text-align: center;
     padding-bottom: 10px;
     
 }
-/*invitaacion*/
+.boton{
+    margin-top: 20px;
+    padding: 5px;
+    background: rgb(2, 65, 102);
+    color: white;
+    border: solid 1px #fff;
+}
+.fondo{
+    position: absolute;
+    width:  300px;
+    height: 300px;
+    border-radius: 10px;
+    background: rgba(31, 30, 30, 0.7);
+    z-index: 1;
+}
+.vermas{
+    z-index: 2;
+}
+
+/*invitacion*/
 #invitacion{
     display: flex;
     justify-content: center;
 }
 #invitacion div{
-    position: absolute;
+    position: relative;
+    top: 160px;
     max-width: 900px;
-    background: red;
+    background: rgb(255, 255, 255);
     margin: 50px;
-    padding: 10px;
+    padding: 10px 10px 30px 10px;
     border-radius:20px;
+    border: solid 2px rgb(34, 34, 34);
+    text-align: center;
 }
 #invitacion h4{
     
@@ -213,8 +252,9 @@ h3{
 footer{
     display: flex;
     background: rgb(34, 34, 34);
-    padding-top: 30px;
-    height: 20vw;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    
     align-items: flex-start;
     box-sizing: border-box;
 }
@@ -242,3 +282,28 @@ ul li a:hover{
 #soluciones div:hover{
     background: rgb(71, 194, 216);
 }
+.boton:hover{
+    background: rgb(3, 90, 141);
+}
+
+/*Media queries*/
+@media (min-width: 992px) {
+    #nav{
+        display: block;
+    }
+    .menuIcon{
+        display: none;
+    }
+    #soluciones{
+        height: 25vw;
+        flex-wrap: nowrap;
+    }
+    #soluciones div{
+
+        width: 25vw;
+        height: 25vw;
+
+    }
+}
+
+
